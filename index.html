@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विकास खंड भरतपुर</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        /* Reset CSS */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header styles */
+        .hero {
+            background-image: linear-gradient(to bottom right, #4CAF50, #FF6B6B);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation styles */
+        .navigation {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .navigation a:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1000;
+            text-align: left;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>विकास खंड भरतपुर</h1>
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="#">होम</a></li>
+            <li class="dropdown">
+                <a href="#">डाटाबेस लिस्ट</a>
+                <div class="dropdown-content">
+                    <a href="#">कर्मचारी</a>
+                    <a href="#">हितग्राही</a>
+                </div>
+            </li>
+            <li><a href="#">सूचना</a></li>
+            <li class="dropdown">
+                <a href="#">विभागीय लॉग इन</a>
+                <div class="dropdown-content">
+                    <a href="#">जिला </a>
+                    <a href="#">ब्लॉक</a>
+                    <a href="#">ग्राम पंचायत</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="content-section">
+            <h2>हमारे बारे में</h2>
+            <p>हम विकास और प्रगति के लिए काम करते हैं।</p>
+        </div>
+
+        <div class="content-section">
+            <h2>हमारी गतिविधियाँ</h2>
+            <p>हम कई सामाजिक कार्यक्रमों और योजनाओं में शामिल हैं।</p>
+        </div>
+
+        <div class="content-section">
+            <h2>संपर्क करें</h2>
+            <p>यदि आपको हमसे कुछ पूछना है, तो कृपया हमसे संपर्क करें।</p>
+            <address>
+                पता: १२३ मेन स्ट्रीट, भरतपुर<br>
+                फोन: +१२३४५६७८९<br>
+                ईमेल: info@example.com
+            </address>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 विकास खंड भरतपुर. सभी अधिकार सुरक्षित हैं।
+    </footer>
+</body>
+</html>
