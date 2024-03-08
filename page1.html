@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विकासखण्ड भरतपुर - हितग्राही सूची</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- DataTables Buttons CSS -->
+    <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for navigation bar */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 120px;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+        }
+        .relative:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 8px 12px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navigation bar with logo -->
+<nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="w-20 h-auto">
+        <a class="text-white text-lg font-semibold" href="index.html">विकासखण्ड भरतपुर</a> <!-- Changed href to index.html -->
+        <!-- Navigation items -->
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="text-white">होम</a></li> <!-- Changed href to index.html -->
+            <!-- Dropdown menu for डाटाबेस सूची -->
+            <li class="relative">
+                <a class="text-white" href="#">डाटाबेस सूची</a>
+                <ul class="absolute hidden dropdown-content bg-white shadow-md">
+                    <li><a href="page1.html" class="text-gray-800 hover:bg-gray-200">कर्मचारी सूची</a></li>
+                    <li><a href="page2.html" class="text-gray-800 hover:bg-gray-200">हितग्राही सूची</a></li>
+                </ul>
+            </li>
+            <li><a href="page3.html" class="text-gray-800 hover:bg-gray-200">सूचना पटल</a></li>
+            <!-- Dropdown menu for विभागीय लागिन -->
+            <li class="relative">
+                <a class="text-white" href="#">विभागीय लागिन</a>
+                <ul class="absolute hidden dropdown-content bg-white shadow-md">
+                    <li><a href="#" class="text-gray-800 hover:bg-gray-200">जिला</a></li>
+                    <li><a href="#" class="text-gray-800 hover:bg-gray-200">ब्लाक</a></li>
+                    <li><a href="page6.html" class="text-gray-800 hover:bg-gray-200">ग्राम पंचायत</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#" class="text-gray-800 hover:bg-gray-200">सम्पर्क</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Table -->
+    <div class="container mx-auto mt-8">
+        <!-- Table heading -->
+        <h1 class="text-center text-2xl font-semibold mb-4">कर्मचारी सूची</h1>
+        <!-- Table content -->
+        <div class="table-responsive">
+            <table id="hitgrahi-table" class="table-auto w-full border-collapse border border-green-800">
+                <thead class="bg-green-200">
+                    <tr>
+                        <th class="border border-green-600 px-4 py-2">क्र.</th>
+                        <th class="border border-green-600 px-4 py-2">ब्लाक का नाम</th>
+                        <th class="border border-green-600 px-4 py-2">ग्राम पंचायत</th>
+                        <th class="border border-green-600 px-4 py-2">ग्राम</th>
+                        <th class="border border-green-600 px-4 py-2">बसाहट/ पारा/मोहल्ला का नाम</th>
+                        <th class="border border-green-600 px-4 py-2">परिवार क्र.</th>
+                        <th class="border border-green-600 px-4 py-2">नाम</th>
+                        <th class="border border-green-600 px-4 py-2">लिंग</th>
+                        <th class="border border-green-600 px-4 py-2">पिता/पति का नाम</th>
+                        <th class="border border-green-600 px-4 py-2">मुखिया से सम्बन्ध</th>
+                        <th class="border border-green-600 px-4 py-2">उम्र</th>
+                        <th class="border border-green-600 px-4 py-2">मोबाइल नंबर</th>
+                        <th class="border border-green-600 px-4 py-2">आधार नम्बर</th>
+                        <th class="border border-green-600 px-4 py-2">शिक्षा</th>
+                        <th class="border border-green-600 px-4 py-2">जाति प्रमाण पत्र</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample rows -->
+                    <!-- You can add more rows with actual data here -->
+                    <tr>
+                        <td class="border border-green-600 px-4 py-2">1</td>
+                        <td class="border border-green-600 px-4 py-2">Bharatpur</td>
+                        <td class="border border-green-600 px-4 py-2">janakpur</td>
+                        <td class="border border-green-600 px-4 py-2">janakpur</td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                        <td class="border border-green-600 px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-green-600 px-4 py-2">2</td>
+                        <td class="border border-green-600 px-4 py-2">Bharatpur</td>
+                        <td class="border border-green-600 px-4 py-2">जनकपुर</td>
+                        <td class="border border-green-600 px-4 py-2">जनकपुर</td>
+                        <td class="border border-green-600 px-4 py-2">उदाहरण बसाहट</td>
+                        <td class="border border-green-600 px-4 py-2">1</td>
+                        <td class="border border-green-600 px-4 py-2">रामेश</td>
+                        <td class="border border-green-600 px-4 py-2">पुरुष</td>
+                        <td class="border border-green-600 px-4 py-2">सीताराम</td>
+                        <td class="border border-green-600 px-4 py-2">पिता</td>
+                        <td class="border border-green-600 px-4 py-2">35</td>
+                        <td class="border border-green-600 px-4 py-2">9876543210</td>
+                        <td class="border border-green-600 px-4 py-2">1234 5678 9012</td>
+                        <td class="border border-green-600 px-4 py-2">स्नातक</td>
+                        <td class="border border-green-600 px-4 py-2">हाँ</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-green-600 px-4 py-2">3</td>
+                        <td class="border border-green-600 px-4 py-2">Bharatpur</td>
+                        <td class="border border-green-600 px-4 py-2">जनकपुर</td>
+                        <td class="border border-green-600 px-4 py-2">जनकपुर</td>
+                        <td class="border border-green-600 px-4 py-2">उदाहरण बसाहट</td>
+                        <td class="border border-green-600 px-4 py-2">2</td>
+                        <td class="border border-green-600 px-4 py-2">सीता</td>
+                        <td class="border border-green-600 px-4 py-2">महिला</td>
+                        <td class="border border-green-600 px-4 py-2">रामेश</td>
+                        <td class="border border-green-600 px-4 py-2">पति</td>
+                        <td class="border border-green-600 px-4 py-2">32</td>
+                        <td class="border border-green-600 px-4 py-2">9876543211</td>
+                        <td class="border border-green-600 px-4 py-2">2345 6789 0123</td>
+                        <td class="border border-green-600 px-4 py-2">स्नातक</td>
+                        <td class="border border-green-600 px-4 py-2">हाँ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 py-4 text-white text-center">
+        <div class="container mx-auto">
+            <p>© 2024 विकास खंड भरतपुर. सभी अधिकार सुरक्षित हैं।</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <!-- DataTables Buttons Print JS -->
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <!-- DataTables Buttons PDF JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+    <!-- DataTables Buttons Excel JS -->
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script>
+        // JavaScript for dropdown functionality
+        $(document).ready(function() {
+            // Show dropdown menu on hover and keep it open until mouse leaves
+            $('.relative').mouseenter(function() {
+                $(this).find('.dropdown-content').removeClass('hidden');
+            });
+            
+            // Hide dropdown menu when mouse leaves the menu
+            $('.relative').mouseleave(function() {
+                $(this).find('.dropdown-content').addClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
