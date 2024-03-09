@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हितग्राही सूची</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styles for navigation bar */
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute;
+            background-color: #fff;
+            min-width: 120px;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+        }
+        .relative:hover .dropdown-content {
+            display: block; /* Display when parent is hovered */
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 8px 12px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        .passport-frame {
+            border: 2px solid #000;
+            padding: 4px;
+            display: inline-block;
+        }
+        /* Custom styles for form */
+        .form-container {
+            max-width: 600px; /* Adjust the max-width to your preference */
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 0 20px; /* Add some padding to the sides */
+        }
+        /* Set footer to the bottom of the page */
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            font-family: 'Noto Sans', sans-serif; /* Specify the professional Hindi font here */
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #16a085;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation bar with logo -->
+<nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="w-20 h-auto">
+        <!-- Website Title -->
+        <a class="text-white text-lg font-semibold" href="index.html">विकासखण्ड भरतपुर</a>
+        <!-- Navigation items -->
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="text-white">होम</a></li>
+            <!-- Dropdown menu for डाटाबेस सूची -->
+            <li class="relative">
+                <a class="text-white" href="#">डाटाबेस सूची</a>
+                <ul class="dropdown-content hidden bg-white shadow-md">
+                    <li><a href="page1.html" class="text-gray-800 hover:bg-gray-200">कर्मचारी सूची</a></li>
+                    <li><a href="page2.html" class="text-gray-800 hover:bg-gray-200">हितग्राही सूची</a></li>
+                </ul>
+            </li>
+            <li><a href="page3.html" class="text-gray-800 hover:bg-gray-200">सूचना पटल</a></li>
+            <!-- Dropdown menu for विभागीय लागिन -->
+            <li class="relative">
+                <a class="text-white" href="#">विभागीय लागिन</a>
+                <ul class="dropdown-content hidden bg-white shadow-md">
+                    <li><a href="page4.html" class="text-gray-800 hover:bg-gray-200">जिला</a></li>
+                    <li><a href="page5.html" class="text-gray-800 hover:bg-gray-200">ब्लाक</a></li>
+                    <li><a href="page6.html" class="text-gray-800 hover:bg-gray-200">ग्राम पंचायत</a></li>
+                </ul>
+            </li>
+            <li><a class="text-white" href="#">सम्पर्क</a></li>
+        </ul>
+    </div>
+</nav>
+
+<form class="container mx-auto px-4 mt-4 space-y-6 form-container">
+    <div class="rounded-md shadow-sm -space-y-px">
+        <!-- Block Name -->
+        <div>
+            <label for="block_name" class="sr-only">ब्लाक का नाम</label>
+            <input id="block_name" name="block_name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="ब्लाक का नाम">
+        </div>
+        <!-- Gram Panchayat -->
+        <div>
+            <label for="gram_panchayat" class="sr-only">ग्राम पंचायत</label>
+            <input id="gram_panchayat" name="gram_panchayat" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="ग्राम पंचायत">
+        </div>
+        <!-- Gram -->
+        <div>
+            <label for="gram" class="sr-only">ग्राम</label>
+            <input id="gram" name="gram" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="ग्राम">
+        </div>
+        <!-- Basahat/Para/Mohalla Name -->
+        <div>
+            <label for="location_name" class="sr-only">बसाहट/पारा/मोहल्ला का नाम</label>
+            <input id="location_name" name="location_name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="बसाहट/पारा/मोहल्ला का नाम">
+        </div>
+        <!-- Family Number -->
+        <div>
+            <label for="family_number" class="sr-only">परिवार क्रमांक</label>
+            <input id="family_number" name="family_number" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="परिवार क्रमांक">
+        </div>
+        <!-- Name -->
+        <div>
+            <label for="name" class="sr-only">नाम</label>
+            <input id="name" name="name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="नाम">
+        </div>
+        <!-- Gender -->
+        <div>
+            <label for="gender" class="sr-only">लिंग</label>
+            <input id="gender" name="gender" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="लिंग">
+        </div>
+        <!-- Father/Husband Name -->
+        <div>
+            <label for="father_husband_name" class="sr-only">पिता/पति का नाम</label>
+            <input id="father_husband_name" name="father_husband_name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="पिता/पति का नाम">
+        </div>
+        <!-- Relation with Head -->
+        <div>
+            <label for="relation_with_head" class="sr-only">मुखिया से सम्बन्ध</label>
+            <input id="relation_with_head" name="relation_with_head" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="मुखिया से सम्बन्ध">
+        </div>
+        <!-- Age -->
+        <div>
+            <label for="age" class="sr-only">उम्र</label>
+            <input id="age" name="age" type="number" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="उम्र">
+        </div>
+        <!-- Mobile Number -->
+        <div>
+            <label for="mobile" class="sr-only">मोबाइल नम्बर</label>
+            <input id="mobile" name="mobile" type="tel" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="मोबाइल नम्बर">
+        </div>
+        <!-- Aadhar Number -->
+        <div>
+            <label for="aadhar_number" class="sr-only">आधार नम्बर</label>
+            <input id="aadhar_number" name="aadhar_number" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="आधार नम्बर">
+        </div>
+        <!-- Education -->
+        <div>
+            <label for="education" class="sr-only">शिक्षा</label>
+            <input id="education" name="education" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="शिक्षा">
+        </div>
+        <!-- Caste Certificate -->
+        <div>
+            <label for="caste_certificate" class="sr-only">जाति प्रमाण पत्र (हाँ/नहीं)</label>
+            <input id="caste_certificate" name="caste_certificate" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="जाति प्रमाण पत्र (हाँ/नहीं)">
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            जमा करें
+        </button>
+    </div>
+</form>
+
+
+<!-- Footer -->
+<footer class="bg-green-600 py-4 text-white text-center mt-auto">
+    <div class="container mx-auto">
+        <p>© 2024 विकास खंड भरतपुर. सभी अधिकार सुरक्षित हैं।</p>
+    </div>
+</footer>
+
+<!-- JavaScript for dropdown functionality -->
+<script>
+    // JavaScript for dropdown menu functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all "relative" elements
+        const relatives = document.querySelectorAll('.relative');
+
+        // Add event listener to each "relative" element
+        relatives.forEach(relative => {
+            relative.addEventListener('mouseenter', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.remove('hidden');
+            });
+
+            relative.addEventListener('mouseleave', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.add('hidden');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
