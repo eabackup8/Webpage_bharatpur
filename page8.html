@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कर्मचारी सूची</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styles for navigation bar */
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute;
+            background-color: #fff;
+            min-width: 120px;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+        }
+        .relative:hover .dropdown-content {
+            display: block; /* Display when parent is hovered */
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 8px 12px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        /* Custom styles for form */
+        .form-container {
+            max-width: 600px; /* Adjust the max-width to your preference */
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 0 20px; /* Add some padding to the sides */
+        }
+        /* Set footer to the bottom of the page */
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            font-family: 'Noto Sans', sans-serif; /* Specify the professional Hindi font here */
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #16a085;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation bar with logo -->
+<nav class="bg-green-600 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <img src="https://via.placeholder.com/150" alt="Logo" class="w-20 h-auto">
+        <!-- Website Title -->
+        <a class="text-white text-lg font-semibold" href="index.html">विकासखण्ड भरतपुर</a>
+        <!-- Navigation items -->
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="text-white">होम</a></li>
+            <!-- Dropdown menu for डाटाबेस सूची -->
+            <li class="relative">
+                <a class="text-white" href="#">डाटाबेस सूची</a>
+                <ul class="dropdown-content bg-white shadow-md">
+                    <li><a href="page1.html" class="text-gray-800 hover:bg-gray-200">कर्मचारी सूची</a></li>
+                    <li><a href="page2.html" class="text-gray-800 hover:bg-gray-200">हितग्राही सूची</a></li>
+                </ul>
+            </li>
+            <li><a href="page3.html" class="text-gray-800 hover:bg-gray-200">सूचना पटल</a></li>
+            <!-- Dropdown menu for विभागीय लागिन -->
+            <li class="relative">
+                <a class="text-white" href="#">विभागीय लागिन</a>
+                <ul class="dropdown-content bg-white shadow-md">
+                    <li><a href="page4.html" class="text-gray-800 hover:bg-gray-200">जिला</a></li>
+                    <li><a href="page5.html" class="text-gray-800 hover:bg-gray-200">ब्लाक</a></li>
+                    <li><a href="page6.html" class="text-gray-800 hover:bg-gray-200">ग्राम पंचायत</a></li>
+                </ul>
+            </li>
+            <li><a class="text-white" href="#">सम्पर्क</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content with Client Information Form -->
+<div id="content">
+    <div class="container mx-auto py-8">
+        <h1 class="text-center text-3xl font-semibold text-gray-800 mb-8">कर्मचारी सूची</h1>
+        <form id="clientForm" class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+            <div class="mb-6">
+                <label for="name" class="block text-sm font-medium text-gray-700">पूरा नाम:</label>
+                <input type="text" id="name" name="name" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="पूरा नाम">
+            </div>
+
+            <div class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-700">ईमेल:</label>
+                <input type="email" id="email" name="email" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="ईमेल">
+            </div>
+
+            <div class="mb-6">
+                <label for="phone" class="block text-sm font-medium text-gray-700">फोन:</label>
+                <input type="tel" id="phone" name="phone" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="फोन">
+            </div>
+
+            <div class="mb-6">
+                <label for="address" class="block text-sm font-medium text-gray-700">पता:</label>
+                <textarea id="address" name="address" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="पता"></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label for="additional_info" class="block text-sm font-medium text-gray-700">अतिरिक्त जानकारी:</label>
+                <textarea id="additional_info" name="additional_info" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="अतिरिक्त जानकारी"></textarea>
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    सबमिट करें
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-green-600 py-4 text-white text-center mt-auto">
+    <div class="container mx-auto">
+        <p>© 2024 विकास खंड भरतपुर. सभी अधिकार सुरक्षित हैं।</p>
+    </div>
+</footer>
+
+<!-- JavaScript for dropdown functionality and form submission -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // JavaScript for dropdown menu functionality
+        const relatives = document.querySelectorAll('.relative');
+        relatives.forEach(relative => {
+            relative.addEventListener('mouseenter', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.remove('hidden');
+            });
+            relative.addEventListener('mouseleave', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.add('hidden');
+            });
+        });
+
+        // JavaScript for form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby3ycBPouQ7GgAKi-EfW2gmJhKEZtlPdxqldURRnF5xsQzP05VxHx_jAqlI1SNHwPBkGw/exec';
+        const form = document.getElementById('clientForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: formData 
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your form has been submitted successfully.");
+                    form.reset(); // Reset the form after successful submission
+                } else {
+                    throw new Error('There was a problem submitting your form. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("There was a problem submitting your form. Please try again later.");
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
