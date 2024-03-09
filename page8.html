@@ -93,43 +93,34 @@
 </nav>
 
 <!-- Content with Client Information Form -->
-<div id="content">
-    <div class="container mx-auto py-8">
-        <h1 class="text-center text-3xl font-semibold text-gray-800 mb-8">कर्मचारी सूची</h1>
-        <form id="clientForm" class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-            <div class="mb-6">
-                <label for="name" class="block text-sm font-medium text-gray-700">पूरा नाम:</label>
-                <input type="text" id="name" name="name" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="पूरा नाम">
-            </div>
-
-            <div class="mb-6">
-                <label for="email" class="block text-sm font-medium text-gray-700">ईमेल:</label>
-                <input type="email" id="email" name="email" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="ईमेल">
-            </div>
-
-            <div class="mb-6">
-                <label for="phone" class="block text-sm font-medium text-gray-700">फोन:</label>
-                <input type="tel" id="phone" name="phone" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="फोन">
-            </div>
-
-            <div class="mb-6">
-                <label for="address" class="block text-sm font-medium text-gray-700">पता:</label>
-                <textarea id="address" name="address" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="पता"></textarea>
-            </div>
-
-            <div class="mb-6">
-                <label for="additional_info" class="block text-sm font-medium text-gray-700">अतिरिक्त जानकारी:</label>
-                <textarea id="additional_info" name="additional_info" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="अतिरिक्त जानकारी"></textarea>
-            </div>
-
-            <div class="flex justify-end">
-                <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    सबमिट करें
-                </button>
-            </div>
-        </form>
+<form id="clientForm" class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+    <div class="mb-6">
+        <label for="name" class="block text-sm font-medium text-gray-700">नाम:</label>
+        <input type="text" id="name" name="नाम" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="नाम">
     </div>
-</div>
+
+    <div class="mb-6">
+        <label for="designation" class="block text-sm font-medium text-gray-700">पदनाम:</label>
+        <input type="text" id="designation" name="पदनाम" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="पदनाम">
+    </div>
+
+    <div class="mb-6">
+        <label for="mobile" class="block text-sm font-medium text-gray-700">मोबाइल नम्बर:</label>
+        <input type="tel" id="mobile" name="मोबाइल नम्बर" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none" placeholder="मोबाइल नम्बर">
+    </div>
+
+    <div class="mb-6">
+        <label for="joining_date" class="block text-sm font-medium text-gray-700">कार्यभार ग्रहण तिथि:</label>
+        <input type="date" id="joining_date" name="कार्यभार ग्रहण तिथि" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-blue-400 focus:outline-none">
+    </div>
+
+    <div class="flex justify-end">
+        <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            सबमिट करें
+        </button>
+    </div>
+</form>
+
 
 <!-- Footer -->
 <footer class="bg-green-600 py-4 text-white text-center mt-auto">
