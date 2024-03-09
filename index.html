@@ -10,7 +10,7 @@
     <style>
         /* Custom styles for navigation bar */
         .dropdown-content {
-            display: none;
+            display: none; /* Hidden by default */
             position: absolute;
             background-color: #fff;
             min-width: 120px;
@@ -20,7 +20,7 @@
             border-radius: 0.25rem;
         }
         .relative:hover .dropdown-content {
-            display: block;
+            display: block; /* Display when parent is hovered */
         }
         .dropdown-content a {
             color: #333;
@@ -37,15 +37,19 @@
             display: inline-block;
         }
         /* Set footer to the bottom of the page */
-        html, body {
+        html {
             height: 100%;
         }
         body {
             display: flex;
             flex-direction: column;
+            min-height: 100%;
+            font-family: 'Noto Sans', sans-serif; /* Specify the professional Hindi font here */
+        }
+        main {
+            flex: 1;
         }
         footer {
-            margin-top: auto;
             background-color: #16a085;
             color: white;
             text-align: center;
@@ -55,10 +59,11 @@
 </head>
 <body class="bg-gray-100">
   <!-- Navigation bar with logo -->
+<!-- Navigation bar with logo -->
 <nav class="bg-green-600 py-4">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="w-20 h-auto">
+        <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="w-20 h-auto rounded-full">
         <!-- Website Title -->
         <a class="text-white text-lg font-semibold" href="index.html">विकासखण्ड भरतपुर</a>
         <!-- Navigation items -->
@@ -67,7 +72,7 @@
             <!-- Dropdown menu for डाटाबेस सूची -->
             <li class="relative">
                 <a class="text-white" href="#">डाटाबेस सूची</a>
-                <ul class="absolute hidden dropdown-content bg-white shadow-md">
+                <ul class="dropdown-content hidden bg-white shadow-md">
                     <li><a href="page1.html" class="text-gray-800 hover:bg-gray-200">कर्मचारी सूची</a></li>
                     <li><a href="page2.html" class="text-gray-800 hover:bg-gray-200">हितग्राही सूची</a></li>
                 </ul>
@@ -76,7 +81,7 @@
             <!-- Dropdown menu for विभागीय लागिन -->
             <li class="relative">
                 <a class="text-white" href="#">विभागीय लागिन</a>
-                <ul class="absolute hidden dropdown-content bg-white shadow-md">
+                <ul class="dropdown-content hidden bg-white shadow-md">
                     <li><a href="page4.html" class="text-gray-800 hover:bg-gray-200">जिला</a></li>
                     <li><a href="page5.html" class="text-gray-800 hover:bg-gray-200">ब्लाक</a></li>
                     <li><a href="page6.html" class="text-gray-800 hover:bg-gray-200">ग्राम पंचायत</a></li>
@@ -88,72 +93,79 @@
 </nav>
 
 <!-- Content -->
-<main class="container mx-auto mt-8 px-4 flex justify-center">
+<main class="container mx-auto mt-8 px-4 flex flex-col md:flex-row items-center">
     <!-- Left Content - Employee List -->
-    <section class="w-1/4">
-        <h2 class="text-3xl font-semibold mb-4">कर्मचारी सूची</h2>
-        <table class="table-auto">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">ब्लाक</th>
-                    <th class="px-4 py-2">कुल कर्मचारी</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="border px-4 py-2">Bharatpur</td>
-                    <td class="border px-4 py-2">2</td>
-                </tr>
-                <tr>
-                    <td class="border px-4 py-2">Manendragarh</td>
-                    <td class="border px-4 py-2">1</td>
-                </tr>
-                <tr>
-                    <td class="border px-4 py-2">Baikunthpur</td>
-                    <td class="border px-4 py-2">1</td>
-                </tr>
-            </tbody>
-        </table>
+    <section class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-3xl font-semibold mb-4 text-blue-600">कर्मचारी सूची</h2>
+        <div class="overflow-x-auto">
+            <table class="table-auto border-collapse border border-blue-600 rounded-lg w-full">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="px-4 py-2 text-left">ब्लाक</th>
+                        <th class="px-4 py-2 text-left">कुल कर्मचारी</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-blue-600">
+                    <tr>
+                        <td class="px-4 py-2">Bharatpur</td>
+                        <td class="px-4 py-2">2</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">Manendragarh</td>
+                        <td class="px-4 py-2">1</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">Baikunthpur</td>
+                        <td class="px-4 py-2">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <!-- Right Content - Block Pramukh Photo -->
-    <section class="w-3/4">
-        <h2 class="text-3xl font-semibold mb-4">ब्लाक प्रमुख फोटो</h2>
+    <section class="md:w-1/2 flex flex-col items-center">
+        <h2 class="text-3xl font-semibold mb-4 text-green-600">ब्लाक प्रमुख फोटो</h2>
         <!-- Upload photo frame -->
-        <div class="border border-gray-400 p-4 mb-4 passport-frame">
+        <div class="border border-green-600 p-4 mb-4 rounded-lg">
             <!-- Placeholder for uploaded photo -->
-            <img src="https://www.shutterstock.com/shutterstock/photos/548848999/display_1500/stock-vector-man-in-the-shirt-and-tie-businessman-avatar-or-male-face-icon-vector-illustration-548848999.jpg" alt="Block Pramukh Photo" class="w-48 h-50">
+            <img src="https://www.shutterstock.com/shutterstock/photos/548848999/display_1500/stock-vector-man-in-the-shirt-and-tie-businessman-avatar-or-male-face-icon-vector-illustration-548848999.jpg" alt="Block Pramukh Photo" class="w-48 h-48 mx-auto rounded-lg">
         </div>
         <!-- पदनाम एवं मो.न. -->
-        <p>पदनाम: ब्लाक प्रमुख</p>
-        <p>मो.न.: 9999999999</p>
+        <p class="text-xl font-semibold text-center text-blue-600">पदनाम: ब्लाक प्रमुख</p>
+        <p class="text-lg text-gray-600 text-center">मो.न.: 9999999999</p>
     </section>
 </main>
 
+
+
 <!-- Footer -->
-<footer class="bg-green-600 py-4 text-white text-center">
+<footer class="bg-green-600 py-4 text-white text-center mt-auto">
     <div class="container mx-auto">
         <p>© 2024 विकास खंड भरतपुर. सभी अधिकार सुरक्षित हैं।</p>
     </div>
 </footer>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Custom JavaScript for dropdown functionality -->
+<!-- JavaScript for dropdown functionality -->
 <script>
-    $(document).ready(function() {
-        $('.relative').mouseenter(function() {
-            $(this).find('.dropdown-content').removeClass('hidden');
-        });
-        
-        $('.relative').mouseleave(function() {
-            $(this).find('.dropdown-content').addClass('hidden');
-        });
+    // JavaScript for dropdown menu functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all "relative" elements
+        const relatives = document.querySelectorAll('.relative');
 
-        $('a[href="page1.html"]').click(function(event) {
-            event.preventDefault();
-            window.location.href = "page1.html";
+        // Add event listener to each "relative" element
+        relatives.forEach(relative => {
+            relative.addEventListener('mouseenter', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.remove('hidden');
+            });
+
+            relative.addEventListener('mouseleave', function() {
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.classList.add('hidden');
+            });
         });
     });
 </script>
+
 </body>
 </html>
