@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>विकासखण्ड भरतपुर - हितग्राही सूची</title>
+    <title>विकासखण्ड भरतपुर - ब्लाक प्रमुख फोटो</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- DataTables CSS -->
-    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <!-- Custom CSS for coolers effect -->
     <style>
-        /* Custom styles for navigation bar */
+        .coolers-effect {
+            transition: transform 0.3s ease-in-out;
+        }
+        .coolers-effect:hover {
+            transform: scale(1.1);
+        }
         .navbar-custom {
             background-color: #16a085 !important;
             color: white !important;
         }
-
-        /* Custom styles for footer */
         .footer-custom {
             background-color: #16a085;
             color: white;
@@ -26,65 +27,85 @@
             bottom: 0;
             width: 100%;
         }
-
-        /* Style for iframe */
-        #sheetFrame {
-            width: 100%;
-            height: 500px; /* Set the height as needed */
+        .content {
+            margin-bottom: 150px; /* Adjust this value according to footer height */
+        }
+        /* Adjustments for text color and positioning */
+        .text-black {
+            color: black !important;
+        }
+        .mt-8 {
+            margin-top: 8rem !important; /* Adjust this value to move the content down */
         }
     </style>
 </head>
-
 <body class="bg-gray-100">
 
-    <!-- Navigation bar with logo -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-green py-4 navbar-custom">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="img-fluid rounded-circle" style="width: 40px;">
-                विकासखण्ड भरतपुर
-            </a>
-            <!-- Toggler/collapsible Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigation items -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">होम</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">डाटाबेस सूची</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="page1.html">कर्मचारी सूची</a></li>
-                            <li><a class="dropdown-item" href="page2.html">हितग्राही सूची</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page3.html">सूचना पटल</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">विभागीय लागिन</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="page4.html">जिला</a></li>
-                            <li><a class="dropdown-item" href="page5.html">ब्लाक</a></li>
-                            <li><a class="dropdown-item" href="page6.html">ग्राम पंचायत</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">सम्पर्क</a>
-                    </li>
-                </ul>
-            </div>
+<!-- Navigation bar with logo -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-green py-4 navbar-custom">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="https://i.pinimg.com/736x/86/db/6a/86db6a349b6b902a536da23fabe4e9e0.jpg" alt="Logo" class="img-fluid rounded-circle" style="width: 40px;">
+            विकासखण्ड भरतपुर
+        </a>
+        <!-- Toggler/collapsible Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation items -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">होम</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">डाटाबेस सूची</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="page1.html">कर्मचारी सूची</a></li>
+                        <li><a class="dropdown-item" href="page2.html">हितग्राही सूची</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html">सूचना पटल</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">विभागीय लागिन</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="page4.html">जिला</a></li>
+                        <li><a class="dropdown-item" href="page5.html">ब्लाक</a></li>
+                        <li><a class="dropdown-item" href="page6.html">ग्राम पंचायत</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">सम्पर्क</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Content -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">हितग्राही सूची</h2>
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRu5qXV5J1OXck5dgpbn77_OJy0__PYv1nxNcJNEVvqiuWL0YbEojvm4_ErKV9qRoUnK5aw_Z6QTkZy/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
+    <div class="container mt-4">
+        <div class="table-responsive">
+            <!-- Search bar -->
+            <input type="text" id="searchInput" class="form-control mb-3" placeholder="खोज करें...">
+
+            <!-- Table -->
+            <table class="table table-bordered table-custom">
+                <!-- Table headers -->
+                <thead class="thead-custom">
+                    <tr>
+                        <th>नाम</th>
+                        <th>पदनाम</th>
+                        <th>मोबाइल नम्बर</th>
+                        <th>कार्यभार ग्रहण तिथि</th>
+                    </tr>
+                </thead>
+                <!-- Table body will be populated dynamically -->
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -99,10 +120,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <!-- DataTables Bootstrap JS -->
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <!-- Moment.js for date formatting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch data from the provided URL
+            fetch('https://script.google.com/macros/s/AKfycbyQpgjh9-GXGdIFQTqpazhpAJOWVoL65SiI2CHtI8Wk5WhUIdoci1kDfzIoKunzLVY86A/exec')
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error(`HTTP error! status: ${res.status}`);
+                    }
+                    return res.json();
+                })
+                .then(data => {
+                    let tbody = $('#tableBody');
+                    data.content.forEach(row => {
+                        let tr = $('<tr></tr>');
+                        row.forEach(cell => {
+                            let formattedDate = moment(cell, moment.ISO_8601).format('DD-MM-YYYY');
+                            let td = $('<td></td>').text(formattedDate !== 'Invalid date' ? formattedDate : cell);
+                            tr.append(td);
+                        });
+                        tbody.append(tr);
+                    });
+                })
+                .catch(e => {
+                    console.log('There was a problem with the fetch operation: ' + e.message);
+                });
+
+            // Search functionality
+            $('#searchInput').on('keyup', function() {
+                let searchText = $(this).val().toLowerCase();
+                $('#tableBody tr').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
